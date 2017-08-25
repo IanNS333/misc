@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 6.4.--><structure>
+	<type>fa</type>
+	<automaton>
+		<!--The list of states.-->
+		<state id="0" name="closed">
+			<x>81.0</x>
+			<y>130.0</y>
+			<initial/>
+		</state>
+		<state id="1" name="sleep">
+			<x>198.0</x>
+			<y>221.0</y>
+		</state>
+		<state id="2" name="wait">
+			<x>204.0</x>
+			<y>82.0</y>
+		</state>
+		<state id="3" name="open">
+			<x>319.0</x>
+			<y>132.0</y>
+		</state>
+		<!--The list of transitions.-->
+		<transition>
+			<from>1</from>
+			<to>0</to>
+			<read>rearLow</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>3</to>
+			<read>rearLow</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>rearHigh</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>2</to>
+			<read>frontHigh</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>0</to>
+			<read>rearLow</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>2</to>
+			<read>rearHigh</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>2</to>
+			<read>frontHigh</read>
+		</transition>
+	</automaton>
+</structure>

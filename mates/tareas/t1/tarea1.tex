@@ -1,0 +1,90 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+    \title{Tarea sobre definiciones y demostraciones}
+    \author{Gerardo Galván Olvera A01371872}
+    \date{15 de agosto de 2017}
+    \begin{document}
+        \maketitle
+
+        \section{Definiciones}
+        \begin{itemize}
+            \item Cardinalidad\\
+                La cardinalidad de un \textbf{conjunto} es una medida del
+                \textit{número de elementos} en él. Se calcula haciendo una comparción con otro conjunto o utilizando los \textit{números cardinales} dependiendo de la naturaleza del conjunto. Por ejemplo la cardinalidad del conjunto A $A = \{1,0,-1\}$ es $|A| = 3$
+            \item Función\\
+                Una función es una relación entre dos conjuntos (un conjunto de entradas llamado \textit{dominio} y uno de salidas llamado \textit{codominio} o \textit{rango}), con la propiedad de que a cada elemento del conjunto de entradas le corresponde exactamente un elemento del conjunto de salidas.
+            \item Inyectiva\\
+                La propiedad (de una función) que consiste en corresponder a cada elemento del dominio solo un elemento del contradominio.
+            \item Suryectiva\\
+                La propiedad (de una función) que consiste en que a cada elemento del contradominio le corresponda uno o más elementos del dominio.
+            \item Biyectiva\\
+                Se llama biyectiva a una función que es inyectiva y suryectiva.
+        \end{itemize}
+        
+        \section{Demostraciones}
+            \begin{itemize}
+                \item Siendo p la siguiente proposición: $\sum_{i = 1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}$, $\mathbb{N}$ (el conjunto de los números naturales) el dominio para ésta y $\mathcal{S}$ el conjunto de valores de $\mathbb{N}$ que hacen a p verdadera:
+                
+                \begin{enumerate}
+                    \item Prueba con elemento ínfimo de $\mathbb{N}$:\\
+                    $$1^2 = 1 = \frac{1(1+1)(2(1)+1)}{6} = \frac{1(2)(3)}{6} = \frac{6}{6} = 1$$
+                    \item Se hipotetiza que para
+                    $k \in \mathbb{N}$:
+                    $$\sum_{i = 1}^{k} i^2 = \frac{k(k+1)(2k+1)}{6}$$
+                    es decir, $k \in \mathcal{S}$
+                    \item Prueba $k \in \mathcal{S} \Rightarrow k+1 \in \mathcal{S}$:\\
+             
+                    $$\sum_{i = 1}^{k+1}i^2 = (\sum_{i = 1}^{k}i^2) + (k+1)^2$$
+                    $$\frac{(k+1)((k+1)+1)(2(k+1)+1)}{6} = \frac{k(k+1)(2k+1)}{6} + (k+1)^2$$
+                    $$\frac{(k+1)(k+2)(2k+3)}{6} = \frac{(k+1)(k(2k+1)+ 6(k+1))}{6}$$
+                    $$\frac{(k+1)(k+2)(2k+3)}{6} = \frac{(k+1)(2k^2+7k+6)}{6}$$
+                    $$\frac{(k+1)(k+2)(2k+3)}{6} = \frac{(k+1)(k+2)(2k+3)}{6}$$
+
+                     
+                \end{enumerate}
+            \end{itemize}
+
+            \begin{itemize}
+                \item Siendo p la siguiente proposición: $\sum_{i = 1}^{n} i^3 = \frac{n^{2}(n+1)^2}{4}$, $\mathbb{N}$ (el conjunto de los números naturales) el dominio para ésta y $\mathcal{S}$ el conjunto de valores de $\mathbb{N}$ que hacen a p verdadera:
+                
+                \begin{enumerate}
+                    \item Prueba con elemento ínfimo de $\mathbb{N}$:\\
+                    $$1 = \frac{1^{2}(1+1)^2}{4}=\frac{1(2)^2}{4}= 1$$
+                    \item Se hipotetiza que para $k \in \mathbb{N}$:\\
+                    $$\sum_{i = 1}^{k} i^3 = \frac{k^{2}(k+1)^2}{4}$$
+                    es decir, $k \in \mathcal{S}$
+                    \item Prueba $k \in \mathcal{S} \Rightarrow k+1 \in \mathcal{S}$:\\
+                    $$\sum_{i = 1}^{k+1} i^3 = (\sum_{i = 1}^{k} i^3) + (k+1)^3$$
+                    $$\frac{(k+1)^{2}((k+1)+1)^2}{4} = \frac{k^{2}(k+1)^2}{4} + (k+1)^3$$
+                    $$\frac{(k+1)^{2}(k+2)^2}{4} = \frac{k^{2}(k+1)^2 + 6(k+1)^3}{4}$$
+                    $$\frac{(k+1)^{2}(k+2)^2}{4} = \frac{(k+1)^2(k+2)^2}{4}$$
+                \end{enumerate}
+            \end{itemize}
+
+            \begin{itemize}
+                \item Siendo p la siguiente proposición: $n! \geq 2^{n-1} $, $\mathbb{N}$ (el conjunto de los números naturales) el dominio para ésta y $\mathcal{S}$ el conjunto de valores de $\mathbb{N}$ que hacen a p verdadera:
+                
+                \begin{enumerate}
+                    \item Prueba con elemento ínfimo de $\mathbb{N}$:\\
+                    $$1! \geq 2^{1-1}$$
+                    $$1 \geq 1$$
+                    \item Se hipotetiza que para $k \in \mathbb{N}$:\\
+                    $$k! \geq 2^{k-1}$$
+                    es decir, $k \in \mathcal{S}$
+                    \item Prueba $k \in \mathcal{S} \Rightarrow k+1 \in \mathcal{S}$:\\
+                    $$(k!)(k+1) \geq 2^{k-1}(k+1)$$
+                    %$$(k+1)! \geq k(2^{k-1}) + (2^{k-1}) \geq 2k! \geq 2^{k}$$
+                    Siendo 1 el elemento ínfimo de $\mathbb{N}$, entonces $(k+1) \geq 2$:
+                    $$(k!)(k+1) \geq 2^{k-1}(k+1) \geq 2^{k}$$
+                    $$(k+1)! \geq 2^k$$
+                \end{enumerate}
+            \end{itemize}
+            
+            \begin{thebibliography}
+                \bibitem{} Graham, R. L. (1994). Concrete mathematics: a foundation for computer science. Pearson Education India.
+            \end{thebibliography}
+
+    \end{document}

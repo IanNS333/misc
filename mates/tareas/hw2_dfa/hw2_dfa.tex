@@ -1,0 +1,211 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{ {graphics/} }
+    \title{Homework 02 - Deterministic Finite Automata}
+    \author{Gerardo Galván Olvera A01371872}
+    \date{August 22 2017}
+    \begin{document}
+        \maketitle
+                
+        \begin{enumerate}
+            \item The DFA \textbf{R1} accepts $\{\omega\mid\omega\text{ has an even number of 1s}\}$:\\
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.50\textwidth]{A1}
+                    \caption{The R1 DFA}
+                \end{figure}
+
+                For R1:
+                \begin{enumerate}
+                    \item $Q = \{q_0, q_1\}$
+                    \item $\Sigma = \{1, 0\}$
+                    \item $\delta \colon Q \times \Sigma \rightarrow Q =$
+                        \begin{tabular}{|c|c|} 
+                            \hline
+                            $\delta(q_0, 0) = q_0$ & $\delta(q_0, 1) = q_1$\\
+                            \hline
+                            $\delta(q_1, 0) = q_1$ & $\delta(q_1, 1) = q_0$ \\
+                            \hline
+                       \end{tabular}
+
+                    \item $q_0$ (the start state) = $q_0 \in Q$
+                    \item $F = \{q_0\}$
+                \end{enumerate}
+
+            \item The DFA \textbf{R2} accepts \[ \{\omega\mid\omega\text{ contains at least one 1 and an even number of 0s follow the last 1}\}\colon\]\\
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.50\textwidth]{A2}
+                    \caption{The R2 DFA}
+                \end{figure}
+
+                For R2:
+                \begin{enumerate}
+                    \item $Q = \{q_0, q_1, q_2\}$
+                    \item $\Sigma = \{1, 0\}$
+                    \item $\delta \colon Q \times \Sigma \rightarrow Q =$
+                    \begin{tabular}{|c|c|} 
+                        \hline
+                        $\delta(q_0, 0) = q_0$ & $\delta(q_0, 1) = q_1$\\
+                        \hline
+                        $\delta(q_1, 0) = q_2$ & $\delta(q_1, 1) = q_1$ \\
+                        \hline
+                        $\delta(q_2, 0) = q_1$ & $\delta(q_2, 1) = q_1$ \\
+                        \hline
+                   \end{tabular}
+                    \item $q_0$ (the start state) = $q_0 \in Q$
+                    \item $F = \{q_1\}$
+                \end{enumerate}
+
+            \item The DFA \textbf{R3} accepts $\{\omega\mid\omega\text{ is the empty string $\epsilon$ or ends in a 0}\}$:
+
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.50\textwidth]{A3}
+                    \caption{The R3 DFA}
+                \end{figure}
+
+                For R3:
+                \begin{enumerate}
+                    \item $Q = \{q_0, q_1\}$
+                    \item $\Sigma = \{1, 0\}$
+                    \item $\delta \colon Q \times \Sigma \rightarrow Q =$
+                    \begin{tabular}{|c|c|} 
+                        \hline
+                        $\delta(q_0, 0) = q_0$ & $\delta(q_0, 1) = q_1$\\
+                        \hline
+                        $\delta(q_1, 0) = q_0$ & $\delta(q_1, 1) = q_1$ \\
+                        \hline
+                   \end{tabular}
+                    \item $q_0$ (the start state) = $q_0 \in Q$
+                    \item $F = \{q_0\}$
+                \end{enumerate}
+
+            \item The DFA \textbf{R4} accepts $\{\omega\mid\omega\text{ contains at least one 1 and ends with 1}\}$:
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.50\textwidth]{A4}
+                    \caption{The R4 DFA}
+                \end{figure}
+
+                For R4:
+                \begin{enumerate}
+                    \item $Q = \{q_0, q_1\}$
+                    \item $\Sigma = \{1, 0\}$
+                    \item $\delta \colon Q \times \Sigma \rightarrow Q =$
+                    \begin{tabular}{|c|c|} 
+                        \hline
+                        $\delta(q_0, 0) = q_0$ & $\delta(q_0, 1) = q_1$\\
+                        \hline
+                        $\delta(q_1, 0) = q_0$ & $\delta(q_1, 1) = q_1$ \\
+                        \hline
+                   \end{tabular}
+                    \item $q_0$ (the start state) = $q_0 \in Q$
+                    \item $F = \{q_1\}$
+                \end{enumerate}
+
+            \item The DFA \textbf{R5} accepts $\{\omega\mid\omega\text{ starts and ends with the same symbol}\}$:\\
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.50\textwidth]{A5}
+                    \caption{The R5 DFA}
+                \end{figure}
+
+                For R5:
+                \begin{enumerate}
+                    \item $Q = \{q_0, q_1, q_2, q_3, q_4\}$
+                    \item $\Sigma = \{1, 0\}$
+                    \item $\delta \colon Q \times \Sigma \rightarrow Q =$
+                    \begin{tabular}{|c|c|} 
+                        \hline
+                        $\delta(q_1, 0) = q_1$ & $\delta(q_0, 1) = q_2$ \\
+                        \hline
+                        $\delta(q_4, 0) = q_4$ & $\delta(q_2, 1) = q_2$ \\
+                        \hline
+                        $\delta(q_3, 1) = q_3$ & $\delta(q_0, 0) = q_1$ \\
+                        \hline
+                        $\delta(q_3, 0) = q_1$ & $\delta(q_1, 1) = q_3$ \\
+                        \hline
+                        $\delta(q_4, 1) = q_2$ & $\delta(q_2, 0) = q_4$ \\
+                        \hline
+                   \end{tabular}
+                    \item $q_0$ (the start state) = $q_0 \in Q$
+                    \item $F = \{q_1, q_2\}$
+                \end{enumerate}
+
+            \item The DFA \textbf{R6} accepts $\{\omega\mid\omega\text{contains a substring 001}\}$:\\
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.50\textwidth]{A6}
+                    \caption{The R6 DFA}
+                \end{figure}
+
+                For R6:
+                \begin{enumerate}
+                    \item $Q = \{q_0, q_1, q_2, q_3\}$
+                    \item $\Sigma = \{1, 0\}$
+                    \item $\delta \colon Q \times \Sigma \rightarrow Q =$
+                    \begin{tabular}{|c|c|}
+                        \hline
+                        $\delta(q_2, 0) = q_2$ & $\delta(q_0, 1) = q_0$ \\
+                        \hline
+                        $\delta(q_3, 0) = q_3$ & $\delta(q_3, 1) = q_3$ \\
+                        \hline
+                        $\delta(q_1, 0) = q_2$ & $\delta(q_1, 1) = q_0$ \\
+                        \hline
+                        $\delta(q_0, 0) = q_1$ & $\delta(q_2, 1) = q_3$ \\
+                        \hline
+                    \end{tabular}
+                    \item $q_0$ (the start state) = $q_0 \in Q$
+                    \item $F = \{q_3\}$
+                \end{enumerate}
+
+            \item The DFA \textbf{R7} accepts tuples of the form (front door switch state, rear door switch state):\\
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.75\textwidth]{A7}
+                \caption{The R6 DFA}
+            \end{figure}
+
+            For R7:
+            \begin{enumerate}
+                \item $Q = \{open, closed\}$
+                \item $\Sigma =$ \[ \{(frontHigh, rearHigh), (frontHigh, rearLow), \]\[(frontLow, rearHigh), (frontLow, rearLow)\} \]
+                \item $\delta \colon Q \times \Sigma \rightarrow Q =$
+                \begin{tabular}{|c|c|}
+                    \hline
+                    $\delta(closed, (frontHigh, rearLow) ) = open$ \\
+                    \hline
+                    $\delta(open, (frontLow, rearLow) ) = closed$ \\
+                    \hline
+                    $\delta(closed, (frontLow, rearHigh) ) = closed$ \\
+                    \hline
+                    $\delta(open, (frontLow, rearHigh) ) = open$ \\
+                    \hline
+                    $\delta(open, (frontHigh, rearLow) ) = open$ \\
+                    \hline
+                    $\delta(closed, (frontHigh, rearHigh) ) = closed$ \\
+                    \hline
+                    $\delta(open, (frontHigh, rearHigh) ) = open$ \\
+                    \hline
+                    $\delta(closed, (frontLow, rearLow) ) = closed$ \\
+                    \hline
+                \end{tabular}
+                \item $q_0$ (the start state) = $closed \in Q$
+                \item $F = Q$
+            \end{enumerate}
+
+
+            
+            
+        \end{enumerate}
+            
+        % \begin{thebibliography}
+        %     \bibitem{} Graham, R. L. (1994). Concrete mathematics: a foundation for computer science. Pearson Education India.
+        % \end{thebibliography}
+
+    \end{document}

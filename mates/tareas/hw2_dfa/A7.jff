@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 6.4.--><structure>
+	<type>fa</type>
+	<automaton>
+		<!--The list of states.-->
+		<state id="0" name="closed">
+			<x>90.0</x>
+			<y>202.0</y>
+			<initial/>
+			<final/>
+		</state>
+		<state id="1" name="open">
+			<x>309.0</x>
+			<y>203.0</y>
+			<final/>
+		</state>
+		<!--The list of transitions.-->
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>(frontHigh, rearLow)</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>0</to>
+			<read>(frontLow, rearLow)</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>0</to>
+			<read>(frontLow, rearHigh)</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read>(frontLow, rearHigh)</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read>(frontHigh, rearLow)</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>0</to>
+			<read>(frontHigh, rearHigh)</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read>(frontHigh, rearHigh)</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>0</to>
+			<read>(frontLow, rearLow)</read>
+		</transition>
+	</automaton>
+</structure>
